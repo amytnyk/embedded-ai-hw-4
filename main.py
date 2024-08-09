@@ -13,7 +13,7 @@ def download_dataset():
 def train(dataset: Dataset, **kwargs):
     model = YOLO("yolov8n.yaml")  # "runs/detect/train9/weights/last.pt"
 
-    results = model.train(data=f"{dataset.location}/{dataset.name}-{dataset.version}/data.yaml", **kwargs)
+    results = model.train(data=f"{dataset.location}/data.yaml", **kwargs)
     print(results)
 
 
