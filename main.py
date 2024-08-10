@@ -11,7 +11,7 @@ def download_dataset():
 
 
 def train(dataset: Dataset, **kwargs):
-    model = YOLO("yolov8n.yaml")  # "runs/detect/train9/weights/last.pt"
+    model = YOLO("yolov8n.yaml")  # "runs/detect/train/weights/last.pt"
 
     results = model.train(data=f"{dataset.location}/data.yaml", **kwargs)
     print(results)
